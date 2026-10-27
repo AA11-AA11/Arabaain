@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>پلانی وانەکانی چل حەدیسی نەوەوی</title>
+<meta property="og:title" content="پلانی وانەکانی چل حەدیسی نەوەوی">
+<meta property="og:description" content="٢٩ وانە · ڕۆژانە دوو وانە · پێشکەوتنت تۆمار بکە">
+<meta name="description" content="پلانی ڕۆژانەی وانەکانی چل حەدیسی نەوەوی و تۆمارکردنی پێشکەوتن">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f5f2fa;--card:#fffdff;--ink:#2a2438;--mute:#7a7390;--line:#e3dcef;--acc:#5b3fa0;--acc2:#7d5bd0;--accbg:#ece6f8;--gold:#c2693c;--goldbg:#f8e6db;--warn:#a8481f;--warnbg:#fbe9dd;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15121f;--card:#1e1a2d;--ink:#eeeaf7;--mute:#9d97b3;--line:#332d4a;--acc:#b79cff;--acc2:#8f6df0;--accbg:#2a2147;--gold:#f0a878;--goldbg:#3a2a1f;--warn:#f0a074;--warnbg:#3b2418;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15121f;--card:#1e1a2d;--ink:#eeeaf7;--mute:#9d97b3;--line:#332d4a;--acc:#b79cff;--acc2:#8f6df0;--accbg:#2a2147;--gold:#f0a878;--goldbg:#3a2a1f;--warn:#f0a074;--warnbg:#3b2418;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn","Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;line-height:1.75}
+main{max-width:680px;margin:0 auto;padding:14px 14px 48px}
+.hero{background:linear-gradient(135deg,#3f2679,#7a58d1);color:#fff;border-radius:20px;padding:20px 18px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;left:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.08)}
+.hero small{opacity:.85;font-size:.8rem}
+.hero h1{margin:2px 0 4px;font-size:1.5rem;font-weight:800}
+.hero p{margin:0;font-size:.9rem;opacity:.92}
+.tools{display:flex;gap:8px;margin:12px 0}
+.tools button,.btn{flex:1;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:8px 10px;font:inherit;font-size:.85rem;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 6px;text-align:center}
+.st b{display:block;font-size:1.45rem;color:var(--acc);font-weight:800;line-height:1.3}
+.st span{font-size:.75rem;color:var(--mute)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:12px;font-size:.9rem}
+.bar{height:10px;background:var(--line);border-radius:8px;overflow:hidden;margin:6px 0 2px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc2),var(--gold));transition:width .35s}
+.late{background:var(--warnbg);color:var(--warn);border-radius:12px;padding:10px 14px;margin-bottom:12px;font-size:.9rem;display:none}
+.late.on{display:block}
+h2{font-size:1.05rem;margin:18px 2px 8px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:10px;overflow:hidden}
+.day.today{border:2px solid var(--acc);box-shadow:0 4px 16px rgba(91,63,160,.14)}
+.day.rev{background:var(--goldbg);border-color:var(--gold)}
+.dh{display:flex;justify-content:space-between;align-items:center;width:100%;padding:11px 14px;background:none;border:0;color:inherit;font:inherit;text-align:right;cursor:pointer}
+.dh strong{font-weight:700}
+.tag{font-size:.7rem;background:var(--acc);color:#fff;border-radius:20px;padding:1px 9px;margin-inline-start:6px}
+.dm{font-size:.8rem;color:var(--mute)}
+.body{display:none;padding:0 14px 10px}
+.day.open .body{display:block}
+label{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line);cursor:pointer}
+input[type=checkbox]{width:21px;height:21px;margin-top:4px;accent-color:var(--acc);flex:none}
+label small{display:block;color:var(--mute);font-size:.8rem}
+input:checked+span{text-decoration:line-through;color:var(--mute)}
+.pill{display:inline-block;font-size:.72rem;border-radius:20px;padding:0 8px;margin-inline-end:6px;background:var(--accbg);color:var(--acc);font-weight:700}
+.pill.n{background:var(--goldbg);color:var(--gold)}.pill.m{background:var(--warnbg);color:var(--warn)}
+.note{color:var(--mute);font-size:.85rem}
+footer{text-align:center;color:var(--mute);font-size:.8rem;margin-top:24px}
+</style>
+<style>
+.dl input{font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:5px 8px;margin-inline-start:6px}
+label.fade{opacity:.5}
+.nm{display:flex;gap:8px;margin-top:6px}.nm input{flex:1;font:inherit;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-width:0}.nm button{font:inherit;background:var(--acc);color:#fff;border:0;border-radius:10px;padding:8px 16px;cursor:pointer}
+.info{background:var(--goldbg);color:var(--gold)}
+a.lk{color:var(--acc);font-size:.8rem;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:0 8px;margin-inline-start:6px;white-space:nowrap}
+</style>
+</head>
+<body>
+<main>
+<div class="hero">
+  <small>ڕاڤەی مامناوەند · ئەحمەد بورهان</small>
+  <h1>پلانی وانەکانی چل حەدیسی نەوەوی</h1>
+  <p>٢٩ وانە · ڕۆژانە دوو وانە، جومعە سێ وانە · لە شەممە ٣١/١٠ دەست پێدەکات</p>
+</div>
+<div class="tools">
+  <button id="theme">دۆخی تاریک</button>
+  <a class="btn" href="https://www.youtube.com/playlist?list=PLpkIdQrWeU47zEf6vr_Q4y3n1obbverRw" target="_blank" rel="noopener" style="text-decoration:none;text-align:center;color:var(--ink)">پلەیلیست ↗</a>
+  <button id="reset">سفرکردنەوە</button>
+</div>
+<div class="box" id="nameBox"><b>ناوت</b>
+  <div class="nm"><input id="nm" maxlength="40" placeholder="ناوی خۆت بنووسە"><button id="nmb">پاشەکەوت</button></div>
+  <span class="note" id="nst"></span>
+  <div class="note" style="margin-top:6px">ناو و ژمارەی ئەو وانانەی تەواوت کردوون بۆ بەڕێوەبەری خوێندنەکە دەنێردرێت.</div>
+</div>
+<div class="box info">پلەیلیستەکە ٣١ ڤیدیۆیە، بەڵام ڤیدیۆی ژمارە ٥ و ٩ وانە نین. لەم پلانەدا تەنها ٢٩ وانەکە هەژمار دەکرێن و ژمارەی ڤیدیۆکە لەژێر هەر وانەیەک نووسراوە.</div>
+<div class="stats">
+  <div class="st"><b id="dl">–</b><span>ڕۆژ بۆ تاقیکردنەوە</span></div>
+  <div class="st"><b id="left">0</b><span>وانەی ماوە</span></div>
+  <div class="st"><b id="quota">0</b><span>وانەی ئەمڕۆ</span></div>
+</div>
+<div class="box">
+  <b>ڕێژەی تەواوکردن: <span id="pct">0</span>%</b>
+  <div class="bar"><i id="bar"></i></div>
+  <span class="note" id="cnt"></span>
+</div>
+<div class="late" id="late"></div>
+<div class="box note">تاقیکردنەوە: <b>یەکشەممە ١٥/١١/٢٠٢٦</b>. وانەکان لە شەممە ٣١/١٠ دەست پێدەکەن، ڕۆژانە دوو وانە و هەر جومعەیەک سێ وانە، بۆیە دەتوانیت پێش ١٥/١١ تەواوی بکەیت.</div>
+<h2>پلانی ڕۆژانەت</h2>
+<div id="days"></div>
+<div id="doneBox"></div>
+<p class="note">هەر وانەیەک تەواو بوو نیشانەی بکە. ئەگەر ڕۆژێک دواکەوتیت، وانە ماوەکان بەسەر ڕۆژە ماوەکاندا دابەش دەکرێنەوە تا ڕۆژی پێش تاقیکردنەوە. پێشکەوتنەکەت لەسەر ئەم ئامێرە دەپارێزرێت.</p>
+<footer>داوای یارمەتی لە خودا بکە و بێتوانا مەبە ✨</footer>
+</main>
+<script>
+var API="https://script.google.com/macros/s/AKfycbyqEp9A6OXzugmzpkFEKzPyfF3YPYQNRAH1AK8dzLHxyCmCTkM-Jk_vP1VsAo1_168W/exec",N=29,PL="https://www.youtube.com/playlist?list=PLpkIdQrWeU47zEf6vr_Q4y3n1obbverRw",PACE=2;function cap(d){return d.getDay()===5?3:2}
+function vid(n){return n<5?n:(n<8?n+1:n+2)}
+var START=new Date(2026,9,31);
+var DN=["یەکشەممە","دووشەممە","سێشەممە","چوارشەممە","پێنجشەممە","جومعە","شەممە"];
+function dstr(d){return DN[d.getDay()]+" "+d.getDate()+"/"+(d.getMonth()+1)}
+function mid(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate())}
+function pd(s){var p=s.split("-");return new Date(+p[0],+p[1]-1,+p[2])}
+function fmt(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+var KEY="nawawi-plan-v2",S={done:{},dead:"2026-11-14",name:"",id:""},openState={};
+try{var x=JSON.parse(localStorage.getItem(KEY)||"{}");if(x.done)S.done=x.done;if(x.name)S.name=x.name;if(x.id)S.id=x.id;}catch(e){}
+if(!S.id)S.id="u"+Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}sync()}
+var tm;
+function setSt(t){var e=document.getElementById("nst");if(e)e.textContent=t}
+function sync(){
+  if(!S.name){setSt("ناوت بنووسە تاکو پێشکەوتنت تۆمار بکرێت.");return}
+  if(!API){setSt("");return}
+  clearTimeout(tm);tm=setTimeout(function(){
+    var d=[];for(var n=1;n<=N;n++)if(S.done[n])d.push(n);
+    try{fetch(API,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify({id:S.id,name:S.name,done:d}),keepalive:true}).then(function(){setSt("پێشکەوتنت نێردرا ✓")},function(){setSt("نەنێردرا، دووبارە هەوڵ بدەرەوە")})}catch(e){setSt("نەنێردرا")}
+  },700)}
+function mk(n){
+  var l=document.createElement("label"),c=document.createElement("input");c.type="checkbox";c.checked=!!S.done[n];
+  if(c.checked)l.className="fade";
+  c.onchange=function(){if(c.checked)S.done[n]=fmt(mid(new Date()));else delete S.done[n];save();render()};
+  var s=document.createElement("span");s.innerHTML="<span class='pill'>وانەی "+n+"</span><small>ڤیدیۆی "+vid(n)+" لە پلەیلیست</small>";
+  var a=document.createElement("a");a.className="lk";a.href=PL;a.target="_blank";a.rel="noopener";a.textContent="پلەیلیست ↗";
+  a.onclick=function(e){e.stopPropagation()};
+  l.appendChild(c);l.appendChild(s);l.appendChild(a);return l}
+function renderDone(){
+  var box=document.getElementById("doneBox");box.innerHTML="";
+  var ds=[];for(var n=1;n<=N;n++)if(S.done[n])ds.push(n);
+  if(!ds.length)return;
+  var el=document.createElement("div");el.className="day"+(openState.done?" open":"");
+  var h=document.createElement("button");h.className="dh";
+  h.innerHTML="<span><strong>وانە تەواوکراوەکان</strong></span><span class='dm'>"+ds.length+" وانە</span>";
+  h.onclick=function(){openState.done=!el.classList.contains("open");el.classList.toggle("open")};
+  var b=document.createElement("div");b.className="body";
+  var p=document.createElement("p");p.className="note";p.style.margin="0 0 4px";p.textContent="ئەگەر بە هەڵە نیشانەت کردووە، تەنها نیشانەکەی لابە.";b.appendChild(p);
+  ds.forEach(function(n){b.appendChild(mk(n))});
+  el.appendChild(h);el.appendChild(b);box.appendChild(el)}
+function render(){
+  var now=mid(new Date()),from=now<START?START:now,dead=pd(S.dead);
+  if(dead<from)dead=new Date(from);
+  var pend=[];for(var i=1;i<=N;i++)if(!S.done[i])pend.push(i);
+  var left=pend.length,doneN=N-left;
+  var dl=[];for(var d0=new Date(from);d0<=dead;d0.setDate(d0.getDate()+1))dl.push(new Date(d0));
+  var caps=dl.map(cap),need=0,days=0;
+  while(days<caps.length&&need<left){need+=caps[days];days++}
+  if(left===0)days=1;
+  if(need<left)days=caps.length;
+  var uc=caps.slice(0,days),sum=uc.reduce(function(a,c){return a+c},0),tg=[],c2=0;
+  uc.forEach(function(c){c2+=c;tg.push(need>=left?Math.min(left,c2):Math.round(left*c2/sum))});
+  var assign=[];for(var i=0;i<days;i++)assign.push([]);
+  pend.forEach(function(n,k){var di=0;while(di<days-1&&k>=tg[di])di++;assign[di].push(n)});
+  var todayQ=assign[0].length;
+  var expected=0;for(var e=new Date(START);e<from;e.setDate(e.getDate()+1))expected+=cap(e);
+  expected=Math.min(N,expected);var late=expected-doneN;
+  var L=document.getElementById("late");L.removeAttribute("style");
+  if(left===0){L.className="late on";L.style.background="var(--accbg)";L.style.color="var(--acc)";L.textContent="ماشاڵڵا، هەموو وانەکانت تەواو کرد! بۆ ئامادەبوون بۆ تاقیکردنەوە، حەدیسەکان دووبارە بکەرەوە."}
+  else if(now>=START&&late>=2){L.className="late on";L.textContent="نزیکەی "+late+" وانە لە پلانی سەرەتایی دواکەوتویت، بۆیە وانە ماوەکان تا "+dstr(dead)+" دابەش کران: ئەمڕۆ پێویستە "+todayQ+" وانە بخوێنیت. بەردەوام بە."}
+  else L.className="late";
+  var root=document.getElementById("days");root.innerHTML="";
+  assign.forEach(function(us,i){
+    var d=new Date(from);d.setDate(d.getDate()+i);
+    var dt=[];for(var q=1;q<=N;q++)if(S.done[q]===fmt(d))dt.push(q);
+    var isT=i===0&&now>=START,key=d.getTime(),op=key in openState?openState[key]:isT;
+    var el=document.createElement("div");el.className="day"+(isT?" today":"")+(op?" open":"");
+    var h=document.createElement("button");h.className="dh";
+    h.innerHTML="<span><strong>"+dstr(d)+"</strong>"+(isT?'<span class="tag">ئەمڕۆ</span>':"")+"</span><span class='dm'>"+(us.length+dt.length)+" وانە</span>";
+    h.onclick=function(){openState[key]=!el.classList.contains("open");el.classList.toggle("open")};
+    var b=document.createElement("div");b.className="body";
+    dt.forEach(function(n){b.appendChild(mk(n))});
+    us.forEach(function(n){b.appendChild(mk(n))});
+    if(!us.length&&!dt.length){var p=document.createElement("p");p.className="note";p.textContent="ماشاڵڵا، هیچ وانەیەک نەماوە.";b.appendChild(p)}
+    el.appendChild(h);el.appendChild(b);root.appendChild(el)});
+  renderDone();
+  document.getElementById("left").textContent=left;
+  document.getElementById("quota").textContent=todayQ;
+  document.getElementById("dl").textContent=Math.max(0,Math.round((pd("2026-11-15")-now)/864e5));
+  var pc=Math.round(doneN/N*100);
+  document.getElementById("pct").textContent=pc;document.getElementById("bar").style.width=pc+"%";
+  document.getElementById("cnt").textContent=doneN+" لە "+N+" وانەت تەواو کردووە";
+}
+document.getElementById("reset").onclick=function(){if(confirm("هەموو پێشکەوتنەکەت سفر بکرێتەوە؟")){S.done={};save();render()}};
+document.getElementById("theme").onclick=function(){
+  var r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+  r.dataset.theme=dark?"light":"dark";this.textContent=dark?"دۆخی تاریک":"دۆخی ڕووناک"};
+var nm=document.getElementById("nm");nm.value=S.name;
+document.getElementById("nmb").onclick=function(){var v=nm.value.trim();if(!v){setSt("ناوێک بنووسە.");return}S.name=v;save();render()};
+render();sync();
+</script>
+</body>
+</html>
